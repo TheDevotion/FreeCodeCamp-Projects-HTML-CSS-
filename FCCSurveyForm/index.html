@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">
+      Thank you for taking the time to help us improve the platform
+    </p>
+
+    <form
+      id="survey-form"
+      method="post"
+      action="https://register-demo.freecodecamp.org"
+    >
+      <fieldset>
+        <label id="name-label">
+          Name
+          <input type="text" id="name" placeholder="Enter your name" />
+        </label>
+        <label id="email-label">
+          Email
+          <input type="email" id="email" placeholder="Enter your email" />
+        </label>
+        <label id="number-label">
+          Number
+          <input
+            min="5"
+            max="10"
+            type="number"
+            id="number"
+            placeholder="Enter your number"
+          />
+        </label>
+
+        <label>
+          <select id="dropdown">
+            <option value="feature">Challenges</option>
+            <option value="feature">Projects</option>
+            <option value="feature">Open Source</option>
+          </select>
+        </label>
+        <label>
+          <input type="radio" />
+        </label>
+        <label>
+          <input type="radio" />
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>
