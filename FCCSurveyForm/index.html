@@ -19,11 +19,16 @@
       <fieldset>
         <label id="name-label">
           Name
-          <input type="text" id="name" placeholder="Enter your name" />
+          <input type="text" id="name" placeholder="Enter your name" required />
         </label>
         <label id="email-label">
           Email
-          <input type="email" id="email" placeholder="Enter your email" />
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
         </label>
         <label id="number-label">
           Number
@@ -37,6 +42,7 @@
         </label>
 
         <label>
+          What you do on freecodecamp ?
           <select id="dropdown">
             <option value="feature">Challenges</option>
             <option value="feature">Projects</option>
@@ -44,12 +50,34 @@
           </select>
         </label>
         <label>
-          <input type="radio" />
+          Male
+          <input type="radio" value="male" name="ans" />
         </label>
         <label>
-          <input type="radio" />
+          Female
+          <input type="radio" value="female" name="ans" />
         </label>
+        <label>
+          FY
+          <input type="checkbox" value="fy" />
+        </label>
+        <label>
+          SY
+          <input type="checkbox" value="sy" />
+        </label>
+        <label>
+          TY
+          <input type="checkbox" value="ty" />
+        </label>
+
+        <textarea
+          rows="4"
+          cols="30"
+          placeholder="Plese give your feedback..."
+        ></textarea>
       </fieldset>
+
+      <input type="submit" id="submit" />
     </form>
   </body>
 </html>
