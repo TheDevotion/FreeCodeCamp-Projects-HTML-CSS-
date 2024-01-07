@@ -4,9 +4,9 @@
 :root {
   --navbar: #be3144;
   --font-color: #ffffff;
-  --font: Arial, Helvetica, sans-serif;
+  --font: "Roboto", sans-serif;
   --font-weight: bold;
-  --navbar-height: 18vh;
+  --navbar-height: 4rem;
   --primary-bg-color: #303841;
   --projects-section-color: #45567d;
   --max-width: 800px;
@@ -21,6 +21,9 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font);
 }
@@ -166,4 +169,65 @@ body {
 
 .show-all-btn:hover {
   background-color: var(--navbar);
+}
+
+/* Contact section */
+
+#contact-me {
+  height: calc(50vh - var(--navbar-height));
+  width: 100vw;
+  background-color: var(--primary-bg-color);
+
+  text-align: center;
+}
+
+.contact-header header {
+  font-size: 3.25rem;
+  font-weight: bold;
+  color: var(--font-color);
+  margin-top: 4rem;
+}
+
+.contact-header p {
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #bbbbbb;
+}
+
+.contact-links {
+  margin-top: 3rem;
+}
+
+.contact-link {
+  color: var(--font-color);
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transform-origin: 0px;
+  transition: transform 1s ease-out;
+}
+
+.contact-link i:hover {
+  transform: translateY(10px);
+}
+
+@media (max-width: 480px) {
+  #navbar {
+    justify-content: space-around;
+  }
+  .projects-container {
+    grid-template-columns: 1fr;
+    margin: 10vw;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact-me {
+    height: 70vh;
+  }
 }
