@@ -9,6 +9,7 @@
   --navbar-height: 18vh;
   --primary-bg-color: #303841;
   --projects-section-color: #45567d;
+  --max-width: 800px;
 }
 
 *,
@@ -88,17 +89,39 @@ body {
 /* project section css */
 /* +++++++++++++++++++++++++++++++++++++++++++++ */
 
-.project-container {
+#projects {
+  background-color: var(--projects-section-color);
+  text-align: center;
+}
+
+#projects header {
+  color: var(--font-color);
+  font-size: 2.25rem;
+  font-weight: var(--font-weight);
+  padding: 0.2em;
+  max-width: 80vw;
+  margin: 3rem auto;
+  border-bottom: 2px solid var(--font-color);
+}
+
+.projects-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 10px;
-  column-gap: 20px;
+  gap: 5vh;
+  max-width: 900px;
+  margin: auto;
 }
 
 .project-tile {
-  height: 300px;
-  width: 45vw;
+  height: 400px;
+  width: 100%;
   cursor: pointer;
+  background-color: var(--primary-bg-color);
+  border-radius: 0% 0% 1% 1%;
+}
+
+.project-tile a {
+  text-decoration: none;
 }
 
 .project-tile img {
@@ -106,4 +129,41 @@ body {
   overflow: hidden;
   width: 100%;
   height: 80%;
+}
+
+.project-title {
+  color: var(--font-color);
+  font-weight: 400;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+}
+
+.arrow {
+  color: orange;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.project-tile:hover .arrow {
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-all-btn {
+  color: var(--font-color);
+  border: none;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--primary-bg-color);
+  font-size: 1.25rem;
+  border-radius: 3%;
+
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+}
+
+.show-all-btn:hover {
+  background-color: var(--navbar);
 }
