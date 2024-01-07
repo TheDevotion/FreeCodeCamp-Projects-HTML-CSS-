@@ -1,13 +1,109 @@
-#welcome-section {
-  height: 100vh;
+/* General CSS */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+
+:root {
+  --navbar: #be3144;
+  --font-color: #ffffff;
+  --font: Arial, Helvetica, sans-serif;
+  --font-weight: bold;
+  --navbar-height: 18vh;
+  --primary-bg-color: #303841;
+  --projects-section-color: #45567d;
 }
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+/* navbar css */
 
 #navbar {
   position: fixed;
+  width: 100%;
+  height: var(--navbar-height);
+  background-color: var(--navbar);
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
 }
 
-@media (max-width: 300px) {
-  body {
-    font-weight: bold;
-  }
+#navbar li {
+  align-self: center;
+  padding: 1rem;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3vw;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 1.25rem;
+  font-weight: var(--font-weight);
+}
+
+/* welcome section css */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+
+#welcome-section {
+  height: calc(100vh - var(--navbar-height));
+  width: 100%;
+  background: linear-gradient(45deg, var(--primary-bg-color), black);
+  margin-top: var(--navbar-height);
+}
+
+.hero-section {
+  text-align: center;
+  position: relative;
+  top: 40%;
+}
+
+.name {
+  color: var(--font-color);
+  font-weight: var(--font-weight);
+  font-size: 3.5rem;
+}
+
+.job {
+  color: var(--navbar);
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+/* project section css */
+/* +++++++++++++++++++++++++++++++++++++++++++++ */
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 20px;
+}
+
+.project-tile {
+  height: 300px;
+  width: 45vw;
+  cursor: pointer;
+}
+
+.project-tile img {
+  object-fit: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
 }
