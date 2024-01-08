@@ -42,11 +42,11 @@ a.nav-link {
 #navbar li {
   list-style: none;
   border-bottom: 1px solid black;
-
   margin-top: 20px;
 }
 ul {
   padding-left: 0;
+  list-style: none;
 }
 #main-doc {
   width: 60%;
